@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Supers</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   </head>
   <body>
     <nav>
         <a href="/supers">All Charaters</a>
-        <a href="/supers/new">New Character</a>
+        <% if (user) { %>
+        <a href="/supers/new">Add Character</a>
+        <a href="/logout">LOG OUT</a>
+        <% } else { %>
+            <a href="/auth/google" class="login">LOG IN&nbsp;</a>
+          <% } %>
     </nav>
-  </body>
-</html>
+<main>
+    
+
+

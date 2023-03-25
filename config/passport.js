@@ -18,8 +18,6 @@ passport.use(new GoogleStrategy({
       user = await UserModel.create({
         name: profile.displayName,
         googleId: profile.id,
-        email: profile.emails[0].value,
-        avatar: profile.photos[0].value
       })
       cb(null, user)
 
@@ -33,7 +31,7 @@ passport.serializeUser(function(user, cb) {
 });
 
 passport.deserializeUser(function(userId, cb) {
-  UserModel.findbyId(userId)
+  UserModel.findById(userId)
            .then(function(userDoc){
             cb(null, userDoc);
 

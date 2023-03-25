@@ -8,8 +8,11 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const indexRoutes = require('./routes/index');
 
+const indexRouter = require('./routes/index');
+const charactersRouter = require('./routes/characters');
+// const quotesRouter = require('./routes/quotes');
+// const weaponsRouter = require('./routes/weapons');
 
 // create the Express app
 const app = express();
@@ -25,12 +28,13 @@ require('./config/passport');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(methodOverride('_method'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 // mount the session middleware
 app.use(session({
   secret: process.env.SECRET,
@@ -42,6 +46,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
   res.locals.user = req.user; // assinging a property to res.locals, makes that said property (user) availiable in every
@@ -50,7 +55,10 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
-app.use('/', indexRoutes);
+app.use('/', indexRouter);
+app.use('/supers', charactersRouter);
+// app.use('/', quotesRouter);
+// app.use('/', weaponsRouter);
 
 
 // invalid request, send 404 page
