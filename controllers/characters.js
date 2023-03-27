@@ -4,16 +4,20 @@ const CharacterModel = require('../models/character');
 module.exports = {
 	new: newCharacter,
 	create,
-	index
+	index,
+    show
 }
 
-
-
-
-
-
-
-
+function show(req, res) {
+	
+	CharacterModel.findById(req.params.id)
+			   .then(function(characterDoc) {
+			   console.log(characterDoc)
+			   res.render('characters/show', {
+				character: characterDoc
+			   })
+			   })
+}
 
 
 function index(req, res){
@@ -23,7 +27,7 @@ function index(req, res){
 
 				console.log(allCharacters, " <_ data from the db")
 				
-				res.render('characters/index', {character: allCharacters})
+				res.render('characters/index', {characters: allCharacters})
 			  }).catch(function(err){
 				console.log(err);
 				res.send(err)

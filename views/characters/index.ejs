@@ -1,4 +1,4 @@
-
+<%- include('../partials/header') %>
 
 <body>
   <h1>Characters</h1>
@@ -8,13 +8,23 @@
         <th>Character</th>
         <th>Age</th>
         <th>Power Level</th>
-        <th>Quote</th>
         <th>Weapon</th>
       </tr>
     </thead>
-   
-	  
-    </tbody>
+    <tbody>
+
+        <% characters.forEach(c => { %> <!-- "flights" comes from controller -->
+         <tr>
+           <td><%= c.character %></td>
+           <td><%= c.age %></td>
+           <td><%= c.powerLevel %></td>
+           <td><%= c.weapon %></td>
+           <td><a href="/supers/<%= c._id %>">Characters Detail</a></td>
+         </tr>
+         <% }) %>
+       
+     </tbody>
+    
   </table>
 </body>
 </html>

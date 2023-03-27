@@ -11,16 +11,6 @@ const quoteSchema = new mongoose.Schema(
   
 );
 
-const weaponSchema = new mongoose.Schema(
-    {
-        weaponList: {
-            type: String,
-            unique: true
-        }
-      },
-      
-    );
-
 
 const characterSchema = new mongoose.Schema(
   {
@@ -30,8 +20,11 @@ const characterSchema = new mongoose.Schema(
     },
     age: Number,
     powerLevel: Number,
+    weapon: {
+      type: String,
+      required: true
+    },
     quote: [quoteSchema],
-    weapon: [weaponSchema], 
   },
 );
 
