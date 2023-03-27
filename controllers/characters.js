@@ -42,7 +42,7 @@ function create(req, res){
     CharacterModel.create(req.body)
                .then(function(characterCreatedInDb){
                 console.log(characterCreatedInDb, " <- character document")
-                res.redirect('/characters')
+                res.redirect('/supers')
                }).catch((err) => {
                 console.log(err);
                 res.send('There was an error check the terminal, or log the err object')

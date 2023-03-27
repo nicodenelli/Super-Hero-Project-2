@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+
+
+<section id="show-page">
+  <div>Character: </div>
+  <div><%= character.character %></div>
+  <div>Age: </div>
+  <div><%= character.age %></div>
+  <div>Power Level: </div>
+  <div><%= character.powerLevel %></div>
+  <div>Weapon: </div>
+  <div><%= character.weapon %></div>
+  
+<h2>Quote</h2>
+<% if (user) { %>
+<form method="POST" action="/supers/<%= character._id %>">
+  <label>Quote:</label>
+  <input type="string" name="quotes">
+  <input type="submit" value="Add Quote">
+</form>
+<% } else { %>
+  <span>Please Login to add a Quote to a Character</span>
+  <%} %>
+
+<% if (character.quote.length) { %>
+<table>
+    <thead>
+      <tr>
+        <th>Quote</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% character.quote.forEach(function(q) { %>
+          <tr>
+            <td><%= q.quotes %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Comment...</h5>
+  <% } %>

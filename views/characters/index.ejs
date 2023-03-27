@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 
-        <% characters.forEach(c => { %> <!-- "flights" comes from controller -->
+        <% characters.forEach(c => { %> <!-- "characters" comes from controller -->
          <tr>
            <td><%= c.character %></td>
            <td><%= c.age %></td>
@@ -21,8 +21,7 @@
            <td><%= c.weapon %></td>
            <td><a href="/supers/<%= c._id %>">Characters Detail</a></td>
          </tr>
-         <% }) %>
-       
+         <% }) %>       
      </tbody>
     
   </table>

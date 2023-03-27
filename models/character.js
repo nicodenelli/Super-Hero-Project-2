@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // Define the Emedded Schema (NOT MODEL)
 const quoteSchema = new mongoose.Schema(
   {
-    quoteList: {
+    quotes: {
         type: String,
         unique: true
     }
