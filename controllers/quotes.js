@@ -19,7 +19,7 @@ function deleteQuote(req, res){
 		// remove is method on mongoose subdocuments
 		// review is a subdocument
 		// its embedded in the movies, One movie has many rev iews
-		characterDoc.reviews.remove(req.params.id);  // <- mutated a document!
+		characterDoc.quote.remove(req.params.id);  // <- mutated a document!
 		// mongodb doesn't know we removed the review, 
 		// so we have to call save on the movieDoc to tell mongodb
 		characterDoc.save().then(function(){
@@ -42,8 +42,8 @@ function create(req, res){
 					// mutating a document, 
 					// adding/or removing/updating 
 					// something found from the database
-					// characterDoc.quote.push(req.body);
-					characterDoc.quote[0]=req.body;
+					characterDoc.quote.push(req.body);
+					// characterDoc.quote[0]=req.body;
 					// save the document to tell mongodb I changed something, because this 
 					// exists on my express server, mongodb doesn't know I added req.body
                     // to the characters quotes array
