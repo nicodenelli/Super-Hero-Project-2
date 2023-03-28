@@ -35,8 +35,8 @@
           <tr>
             <td><%= q.quotes %></td>
             <td>
-                <form method="POST" action="/supers/<%= character._id %>?_method=DELETE">
-                  <input id="quote" type="submit" value="Delete Quote">
+                <form method="POST" action="/quotes/<%= character._id %>?_method=DELETE">
+                  <button id="quote" type="submit">Delete Quote</button>
                 </form>
               <% }) %>
             </td>
