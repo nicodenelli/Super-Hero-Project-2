@@ -23,13 +23,14 @@ function create(req, res){
 					// mutating a document, 
 					// adding/or removing/updating 
 					// something found from the database
-					characterDoc.quote.push(req.body);
+					// characterDoc.quote.push(req.body);
+					characterDoc.quote[0]=req.body;
 					// save the document to tell mongodb I changed something, because this 
 					// exists on my express server, mongodb doesn't know I added req.body
                     // to the characters quotes array
 					characterDoc.save()
 								 .then(function(){
-									res.render(`/supers/${req.params.id}`)
+									res.redirect(`/supers/${req.params.id}`)
 								 })
 					
 

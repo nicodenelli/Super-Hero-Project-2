@@ -12,14 +12,13 @@
       </tr>
     </thead>
     <tbody>
-
         <% characters.forEach(c => { %> <!-- "characters" comes from controller -->
          <tr>
            <td><%= c.character %></td>
            <td><%= c.age %></td>
            <td><%= c.powerLevel %></td>
            <td><%= c.weapon %></td>
-           <td><a href="/supers/<%= c._id %>">Characters Detail</a></td>
+           <td><a href="/supers/<%= c._id %>">Add Quote to Character</a></td>
          </tr>
          <% }) %>       
      </tbody>

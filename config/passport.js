@@ -39,7 +39,7 @@ passport.deserializeUser(function(userId, cb) {
             cb(err)
            })
 
-  // Find your User, using your model, and then call done(err, whateverYourUserIsCalled)
+  // Find your User, using your model, and then call done/cb(err, whateverYourUserIsCalled)
   // When you call this done function passport assigns the user document to req.user, which will 
   // be availible in every Single controller function, so you always know the logged in user
 
