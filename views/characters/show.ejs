@@ -27,14 +27,30 @@
     <thead>
       <tr>
         <th>Quote</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
+      <% let total=0 %>
         <% character.quote.forEach(function(q) { %>
+          <% total += q.quotes %>
           <tr>
             <td><%= q.quotes %></td>
+            <td>
+              <% if (user && user._id.equals(q.userId)) { %>
+                <form method="POST" action="/supers/<%= q._id %>?_method=DELETE">
+                  <input id="quote" type="submit" value="Delete Quote">
+                </form>
+              <% } %>
+            </td>
           </tr>
-        <% }); %>
+          <% }); %>
+            <tr>
+              <td colspan="2"></td>
+              <td><strong>
+                  <%= (total / character.quote.length).toFixed(1) %>
+                </strong></td>
+          </tr>
       </tbody>
     </table>
   <% } else { %>
