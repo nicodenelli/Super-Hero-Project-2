@@ -10,13 +10,13 @@
   <div><%= character.powerLevel %></div>
   <div>Weapon: </div>
   <div><%= character.weapon %></div>
-  
+</section>
 <h2>Quote</h2>
 <% if (user) { %>
 <form method="POST" action="/supers/<%= character._id %>">
   <label>Quote:</label>
-  <input type="string" name="quotes">
-  <input type="submit" value="Add Quote">
+  <input id="quote-background" type="string" name="quotes">
+  <input id="quote" type="submit" value="Add Quote">
 </form>
 <% } else { %>
   <span>Please Login to add a Quote to a Character</span>

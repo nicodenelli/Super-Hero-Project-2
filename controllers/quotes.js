@@ -7,7 +7,7 @@ module.exports = {
 };
 
 function deleteQuote(req, res){
-	// tell the model to delete the character of the id 
+	// tell the model to delete the quote of the id 
 	// req.params.id represents the id coming from the form on the client
 	CharacterModel.deleteOne(req.params.id);
 	res.redirect('/supers')
