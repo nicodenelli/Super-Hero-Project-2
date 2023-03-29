@@ -5,7 +5,18 @@ module.exports = {
 	new: newCharacter,
 	create,
 	index,
-    show
+    show,
+	edit
+}
+
+function edit(req, res) {
+
+	CharacterModel.findById(req.params.id)
+			   .then(function(characterDoc){
+
+	console.log(characterDoc, " < characterDoc from the db")
+	res.render('characters/index', {character: characterDoc})
+})
 }
 
 function show(req, res) {
@@ -13,9 +24,7 @@ function show(req, res) {
 	CharacterModel.findById(req.params.id)
 			   .then(function(characterDoc) {
 			   console.log(characterDoc)
-			   res.render('characters/show', {
-				character: characterDoc
-			   })
+			   res.render('characters/show', {character: characterDoc})
 			   })
 }
 

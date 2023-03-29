@@ -35,7 +35,7 @@
           <tr>
             <td><%= q.quotes %></td>
             <td>
-                <form method="POST" action="/quotes/<%= character._id %>?_method=DELETE">
+                <form method="POST" action="/quotes/<%= q._id %>?_method=DELETE">
                   <button id="quote" type="submit">Delete Quote</button>
                 </form>
               <% }) %>

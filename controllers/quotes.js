@@ -1,4 +1,4 @@
-const character = require("../models/character");
+
 const CharacterModel = require("../models/character");
 
 module.exports = {
@@ -13,6 +13,7 @@ function deleteQuote(req, res){
 		"quote._id": req.params.id,
 		"quote.userId": req.user._id,
 	  }).then(function (characterDoc) {
+		console.log(characterDoc, "<-- this is character doc")
 		// if we don't find a match, characterDoc would be undefined
 		if(!characterDoc) return res.redirect('/supers');
 	
@@ -42,6 +43,9 @@ function create(req, res){
 					// mutating a document, 
 					// adding/or removing/updating 
 					// something found from the database
+					console.log(req.body, "<--this is req.body")
+					req.body.userId = req.user._id;
+					console.log(req.body, "<--this is req.body")
 					characterDoc.quote.push(req.body);
 					// characterDoc.quote[0]=req.body;
 					// save the document to tell mongodb I changed something, because this 

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 // Define the Emedded Schema (NOT MODEL)
 const quoteSchema = new mongoose.Schema(
   {
+    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
     quotes: {
         type: String,
         required: true
