@@ -18,13 +18,14 @@ function deleteQuote(req, res){
 		if(!characterDoc) return res.redirect('/supers');
 	
 		// remove is method on mongoose subdocuments
-		// review is a subdocument
-		// its embedded in the movies, One movie has many rev iews
+		// quote is a subdocument
+		// its embedded in the characters, One character has many quotes
 		characterDoc.quote.remove(req.params.id);  // <- mutated a document!
-		// mongodb doesn't know we removed the review, 
-		// so we have to call save on the movieDoc to tell mongodb
+		// mongodb doesn't know I removed the quote, 
+		// so I have to call save on the characterDoc to tell mongodb
+		// go back to the character change where the delete quote form was
 		characterDoc.save().then(function(){
-			res.redirect(`/supers/${characterDoc._id}`); // go back to the character change where the delete quote form was
+			res.redirect(`/supers/${characterDoc._id}`); 
 		})
 	
 	
