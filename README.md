@@ -1,35 +1,28 @@
-# passport-boilerplate
+# Supers-App-Project-2
+
+This application is designed to encourage creativity. Consumers have the ability once logged on to create a character. This character can either be a known individual or a completely original thought. Consumers will have the ability to add the name of the character, their age, power Level, weapon and a special quote.
+
+## Technologies Used 
+
+HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, Mongoose, VS Code, Git, Mac laptop
 
 
-This is your passport boilerplate.
+## Getting Started
+1) Click the following link to get to the game board -> https://github.com/nicodenelli/Supers-App-Project-2
 
-## Setup 
+2) Once the app is loaded in the browser consumers will need to login to access the functionality of the website. Google Authentication is REQUIRED to use the application.
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+3) Once logged on, consumers will have the ability to create a character however they would like based off the parameters mentioned above - (add the name of the character, their age, power Level, weapon and a special quote.)
+
+4) Consumers will also have the ability to edit their already created characters if they wish to change the name or any of the other character parameters. As well as add multiple quotes to each character, and/or delete the quotes they have created for that character.
+
+## Screenshots
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+## Next Steps
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
+1) Add delete functionality to a character and not just the quote created for that character
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+2) Add a dressing room tab so the characters can be given a unique appearance
 
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+3) Add a slide show of character examples to the homepage for consumers who may like an idea of what to create before getting started.
