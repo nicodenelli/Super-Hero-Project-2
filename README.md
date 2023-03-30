@@ -8,7 +8,7 @@ HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, 
 
 
 ## Getting Started
-1) Click the following link to get to the game board -> https://github.com/nicodenelli/Supers-App-Project-2
+1) Click the following link to get to the game board -> 
 
 2) Once the app is loaded in the browser consumers will need to login to access the functionality of the website. Google Authentication is REQUIRED to use the application.
 
