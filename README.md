@@ -32,7 +32,7 @@ HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, 
 
 ## Wireframe
 
-<img src="public/images/wireframe.png" alt="wireframe">
+<img src="public/images/wireframe1.png" alt="wireframe1">
 
 
 ## Next Steps
