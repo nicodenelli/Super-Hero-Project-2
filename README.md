@@ -20,6 +20,11 @@ HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, 
 
 ## Screenshots
 
+<img src="images/home-page.png" alt="home-page">
+<img src="images/all-characters-page.png" alt="all-characters-page">
+<img src="images/add-characters-page.png" alt="add-characters-page">
+<img src="images/add or delete-quote-page.png" alt="add or delete-quote-page">
+<img src="images/update-character-details-page.png" alt="update-character-details-page">
 
 ## Next Steps
 
