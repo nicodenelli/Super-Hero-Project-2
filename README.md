@@ -18,13 +18,21 @@ HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, 
 
 5) Link to trello board to see apps creation flow
 
-## Screenshots
+## Project Screenshots
 
 <img src="public/images/home-page.png" alt="home-page">
 <img src="public/images/all-characters-page.png" alt="all-characters-page">
 <img src="public/images/add-characters-page.png" alt="add-characters-page">
 <img src="public/images/add or delete-quote-page.png" alt="add or delete-quote-page">
 <img src="public/images/update-character-details-page.png" alt="update-character-details-page">
+
+## Trello Board
+
+<img src="public/images/trello-board.png" alt="trello-board">
+
+## Wireframe
+
+<img src="public/images/wireframe.png" alt="wireframe">
 
 
 ## Next Steps
