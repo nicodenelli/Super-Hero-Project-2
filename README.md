@@ -8,7 +8,7 @@ HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, 
 
 
 ## Getting Started
-1) Click the following link to get to the game board -> 
+1) Click the following link to get to the game board -> https://red-gorgeous-chimpanzee.cyclic.app/
 
 2) Once the app is loaded in the browser consumers will need to login to access the functionality of the website. Google Authentication is REQUIRED to use the application
 
