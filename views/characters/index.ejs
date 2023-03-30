@@ -9,6 +9,9 @@
         <th>Age</th>
         <th>Power Level</th>
         <th>Weapon</th>
+        <th>Add Quote to Character</th>
+        <th>Edit Character</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -18,9 +21,14 @@
            <td><%= c.age %></td>
            <td><%= c.powerLevel %></td>
            <td><%= c.weapon %></td>
-           <td><a href="/supers/<%= c._id %>">Add Quote to Character</a></td>
-         </tr>
-         <% }) %>       
+           <% if (user) { %>
+           <td><a href="/supers/<%= c._id %>"><img id="batLogo" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/514wMrxRESL._AC_UF894,1000_QL80_.jpg" alt="Batman-Logo"></a></td>
+           <% } %>
+           <% if (user) { %>
+            <td><a href="/supers/<%= c._id %>/edit"><img id="batLogo" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/514wMrxRESL._AC_UF894,1000_QL80_.jpg" alt="Batman-Logo"></a></a></td>
+            <% } %>
+          </tr>
+         <% }) %>  
      </tbody>
     
   </table>

@@ -6,18 +6,29 @@ module.exports = {
 	create,
 	index,
     show,
-	edit
+	edit,
+	update
 }
 
-function edit(req, res) {
-
-	CharacterModel.findById(req.params.id)
-			   .then(function(characterDoc){
-
-	console.log(characterDoc, " < characterDoc from the db")
-	res.render('characters/index', {character: characterDoc})
-})
+async function update(req, res) {
+	try {
+		await CharacterModel.findByIdAndUpdate(req.params.id, req.body)
+			
+		return res.redirect(`/supers/${req.params.id}`);
+	
+	} catch (err) {
+		console.log(err, "<-- this is the update err");
+		return res.redirect('/supers');
+	}
 }
+
+async function edit(req, res) {
+	const char = await CharacterModel.findOne({_id: req.params.id});
+	console.log(char);
+	if (!char) return res.redirect('/supers');
+	res.render('characters/edit', { char });
+}
+
 
 function show(req, res) {
 	

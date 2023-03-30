@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+
+<h1>Edit Page</h1>
+    <form id="new-form" action="/supers/<%= char._id%>/edit?_method=PUT" method="POST">
+                <label>Character Name:</label>
+                <input value="<%= char.character %>" type="string" name="character">
+                <label>Age:</label>
+                <input value="<%= char.age %>" type="number" name="age">
+                <label>Power Level:</label>
+                <input value="<%= char.powerLevel %>" type="number" name="powerLevel">
+                <label>Weapon:</label>
+                <input value="<%= char.weapon %>" type="string" name="weapon">
+                <button type="submit">Update Character</button>
+            </form>
+    </body>
+</html>
