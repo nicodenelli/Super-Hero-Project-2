@@ -2,11 +2,6 @@
 
 This application is designed to encourage creativity, and have a little fun. Consumers have the ability once logged on to create a character. This character can either be a known individual or a completely original thought. Consumers will have the ability to add the name of the character, their age, power Level, weapon and a special quote. Consumers will also have the ability to update/edit and/or delete certain details tied to the character they've created
 
-## Technologies Used 
-
-HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, Mongoose, VS Code, Git, Mac laptop
-
-
 ## Getting Started
 1) Click the following link to get to the game board -> https://red-gorgeous-chimpanzee.cyclic.app/
 
@@ -17,6 +12,11 @@ HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, 
 4) Consumers will also have the ability to edit their already created characters if they wish to change the name or any of the other character parameters. As well as add multiple quotes to each character, and/or delete the quotes they have created for that character
 
 5) Link to trello board to see apps creation flow
+
+## Technologies Used 
+
+HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Express, Node, MongoDB, Mongoose, VS Code, Git, Mac laptop
+
 
 ## Project Screenshots
 
