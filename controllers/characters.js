@@ -12,7 +12,7 @@ module.exports = {
 
 async function update(req, res) {
 	try {
-		await CharacterModel.findByIdAndUpdate(req.params.id, req.body)
+		await CharacterModel.findByIdAndUpdate(req.params.id, req.body) // go into DB - grab character by ID
 			
 		return res.redirect(`/supers/${req.params.id}`);
 	
