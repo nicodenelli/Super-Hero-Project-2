@@ -47,7 +47,7 @@ function index(req, res){
 
 				console.log(allCharacters, " <_ data from the db")
 				
-				res.render('characters/index', {characters: allCharacters})
+				res.render('characters/index', {characters: allCharacters}) //render allCharacters character page
 			  }).catch(function(err){
 				console.log(err);
 				res.send(err)
@@ -56,7 +56,7 @@ function index(req, res){
 	
 }
 
-// create character doc
+// create character doc with contents created for characters
 function create(req, res){
     console.log(req.body, " <- contents of the form, req.body");
     CharacterModel.create(req.body)
@@ -73,6 +73,6 @@ function create(req, res){
 function newCharacter(req, res){
 
 
-	// Render looks in the views folder
+	// Render looks in the views folder (new page)
 	res.render('characters/new')
 }
