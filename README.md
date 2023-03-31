@@ -15,7 +15,7 @@ This application is designed to encourage creativity, and have a little fun. Con
 
 ## Technologies Used 
 
-HTML, Embedded Javascript (ejs), CSS, Terminal, Trello, Cyclic, Atlas, Express, Node, MongoDB, Mongoose, VS Code, Git, Mac laptop
+HTML, Javascript, Embedded Javascript (ejs), CSS, Terminal, Trello, Cyclic, Atlas, Express, Node, MongoDB, Mongoose, VS Code, Git, Mac laptop
 
 
 ## Project Screenshots
