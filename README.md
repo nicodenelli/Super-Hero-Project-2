@@ -3,7 +3,7 @@
 This application is designed to encourage creativity, and have a little fun. Consumers have the ability once logged on to create a character. This character can either be a known individual or a completely original thought. Consumers will have the ability to add the name of the character, their age, power Level, weapon and a special quote. Consumers will also have the ability to update/edit and/or delete certain details tied to the character they've created
 
 ## Getting Started
-1) Click the following link to get to the game board -> https://red-gorgeous-chimpanzee.cyclic.app/
+1) Click the following link to get to the app -> https://red-gorgeous-chimpanzee.cyclic.app/
 
 2) Once the app is loaded in the browser consumers will need to login to access the functionality of the website. Google Authentication is REQUIRED to use the application
 
