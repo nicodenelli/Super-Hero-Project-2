@@ -56,7 +56,7 @@ function index(req, res){
 	
 }
 
-
+// create character doc
 function create(req, res){
     console.log(req.body, " <- contents of the form, req.body");
     CharacterModel.create(req.body)
