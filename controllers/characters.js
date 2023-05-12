@@ -5,7 +5,7 @@ module.exports = {
 	new: newCharacter,
 	create,
 	index,
-    show,
+    	show,
 	edit,
 	update
 }
@@ -48,7 +48,8 @@ function index(req, res){
 				console.log(allCharacters, " <_ data from the db")
 				
 				res.render('characters/index', {characters: allCharacters}) //render allCharacters character page
-			  }).catch(function(err){
+		
+				}).catch(function(err){
 				console.log(err);
 				res.send(err)
 			  })
